@@ -32,7 +32,7 @@ def sieve(n):
     #Space Complexity: O(n)
     #return: smallest prime factors
     spf = [i for i in range(n+1)]
-    for i in range(2,n):
+    for i in range(2,int(n**0.5)+2):
         if(spf[i] != i):
             continue
         for k in range(i*i,n+1,i):
