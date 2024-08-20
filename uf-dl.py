@@ -1,7 +1,5 @@
 class UF(object):
-
     def __init__(self, n):
-        self.count = n
         self.id = list(range(n))
         self.sz = [1] * n
 
@@ -14,6 +12,10 @@ class UF(object):
             p = self.id[p]
         return p
 
+    def getSize(self,p):
+        pId = self.find(p)
+        return self.sz[pId]
+    
     def union(self, p, q):
         pId = self.find(p)
         qId = self.find(q)
